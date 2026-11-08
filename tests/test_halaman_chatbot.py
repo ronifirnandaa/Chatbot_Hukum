@@ -148,7 +148,7 @@ class TestHalamanChatbot(unittest.TestCase):
         self.assertEqual([x["peran"] for x in r], ["user", "assistant"])
         hasil = r[1]["hasil"]
         self.assertIsNone(hasil.galat)
-        self.assertEqual((llm.calls, hasil.model_id, hasil.model_label), (["google:m1"], "google:m1", "Model Satu (belum dievaluasi)"))
+        self.assertEqual((llm.calls, hasil.model_id, hasil.model_label), (["google:m1"], "google:m1", "Model Satu"))
         self.assertIn(hasil.jawaban.jawaban, fake.teks("markdown"))
         labels = fake.teks("expander")
         self.assertTrue(any(l.startswith("Sumber hukum yang ditemukan") for l in labels))

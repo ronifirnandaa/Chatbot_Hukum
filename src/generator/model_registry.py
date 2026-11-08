@@ -35,7 +35,7 @@ class ModelInfo:
 
     @property
     def label_lengkap(self) -> str:
-        return self.label if self.dievaluasi else self.label + " (belum dievaluasi)"
+        return self.label
 
 
 def model_terkonfigurasi(ids: list | None = None) -> list:
