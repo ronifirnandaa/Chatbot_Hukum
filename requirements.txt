@@ -1,0 +1,10 @@
+# Versi belum dikunci. Setelah aplikasi berjalan di komputer Anda, kunci versi
+# dengan `pip freeze` sebelum deployment (dikerjakan pada tahap deployment).
+streamlit
+neo4j
+sentence-transformers
+pandas
+numpy
+plotly
+google-genai
+requests
