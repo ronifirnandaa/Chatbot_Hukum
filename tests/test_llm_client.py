@@ -224,7 +224,7 @@ class TestDaftarModel(unittest.TestCase):
         tersedia = model_tersedia(LLMRouter({"google": llm}),
                                   model_terkonfigurasi(["gemma-4-31b-it", "gemma-4-26b-a4b-it", "tidak-ada"]))
         self.assertEqual([m.id for m in tersedia], ["gemma-4-31b-it"])
-        self.assertEqual(tersedia[0].label_lengkap, "Gemma 4 31B (Google) (belum dievaluasi)")
+        self.assertEqual(tersedia[0].label_lengkap, "Gemma 4 31B (Google)")
 
     def test_galat_listing_dipetakan(self):
         llm, _ = buat([resp()], daftar=ApiError(403, "forbidden " + KUNCI))

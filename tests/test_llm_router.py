@@ -191,7 +191,7 @@ class TestRegistryMultiPenyedia(unittest.TestCase):
     def test_kunci_dan_label(self):
         m = model_terkonfigurasi(["groq:qwen/qwen3.8-27b", "groq:model/baru", "google:gemma-4-31b-it", "gemma-4-26b-a4b-it"])
         self.assertEqual([x.kunci for x in m], ["groq:qwen/qwen3.8-27b", "groq:model/baru", "google:gemma-4-31b-it", "google:gemma-4-26b-a4b-it"])
-        self.assertEqual(m[0].label_lengkap, "Qwen 3.8 27B (Groq) (belum dievaluasi)")
+        self.assertEqual(m[0].label_lengkap, "Qwen 3.8 27B (Groq)")
         self.assertEqual(m[1].label, "model/baru (Groq)")  # model di luar daftar label tetap tampil
         self.assertEqual(ModelInfo("m", "M", False).kunci, "google:m")  # default penyedia lama
 

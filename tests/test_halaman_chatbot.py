@@ -310,7 +310,7 @@ class TestHalamanChatbot(unittest.TestCase):
         fake.input_value = "Apa sanksinya?"
         jalankan(fake, res)
         self.assertEqual(llm.calls, ["groq:qwen/qwen3.8-27b"])
-        self.assertEqual(fake.session_state.riwayat[1]["hasil"].model_label, "Qwen 3.8 27B (Groq) (belum dievaluasi)")
+        self.assertEqual(fake.session_state.riwayat[1]["hasil"].model_label, "Qwen 3.8 27B (Groq)")
 
     def test_tombol_bersihkan_mengosongkan_riwayat(self):
         res, _ = sumber_default()
